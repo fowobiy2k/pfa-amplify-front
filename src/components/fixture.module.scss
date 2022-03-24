@@ -1,0 +1,42 @@
+.fixtureContainer {
+    border: 1px solid green;
+    margin: 1em;
+    display: flex;
+
+    
+    .teamNameDiv {
+        width: 70%;
+        position: relative;
+
+        .teamNameWrapper {
+            
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: capitalize;
+            color: green;
+            font-size: 1.2rem;
+        }
+    }
+
+    .schedule {
+        text-align: center;
+        background-color: #17b978;
+        color: white;
+        width: 30%;
+        position: relative;
+
+        .scheduleContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+
+            div {
+                margin: .5em 0;
+            }
+        }
+    }
+
+}

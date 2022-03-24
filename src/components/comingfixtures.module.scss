@@ -1,0 +1,18 @@
+.mainBlock {
+    margin: 1em;
+    padding: 0;
+    border: 1px solid #071a52;
+    // width: 100%;
+
+    .header {
+        text-align: center;
+        text-transform: capitalize;
+        padding: .5em;
+        background-color: #071a52;
+        color: white;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}

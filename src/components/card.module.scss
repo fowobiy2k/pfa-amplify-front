@@ -1,0 +1,29 @@
+.card {
+    // color: var(--color1);
+    text-align: center;
+
+    .header {
+        background-color: #17b978;
+        border-radius: 2em;
+        color: white;
+        text-transform: capitalize;
+        margin: 0 25%;
+    }
+
+    .desc {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        color: #e33800;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+}
+
+.header:hover {
+    // margin:  20%;
+    // color: #e33800;
+    transform: scale(1.3);
+}
