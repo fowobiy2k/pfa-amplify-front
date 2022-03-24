@@ -2,7 +2,7 @@
   "name": "pfa-amplify",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://18.222.139.2:8099/pfa",
+  "proxy": "http://localhost:8097/pfa",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -13,6 +13,7 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "sass": "^1.49.7",
     "web-vitals": "^2.1.3"
   },
   "scripts": {

@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
-import './App.css';
-import Home from './components/Home'
+// import './App.scss';
+import './App.scss'
+import Home from './pages/Home'
+import Admin from './pages/Admin'
 
 function App() {
 
@@ -14,15 +16,15 @@ function App() {
     const getResources = async () => {
 
       // await fetchFixtures();
-      axios.get('/home').then(
-        res => {
-          const response = res.data;
-          console.log('Data: ', response)
+      // axios.get('/home').then(
+      //   res => {
+      //     const response = res.data;
+      //     console.log('Data: ', response)
 
-        }
-      )
+      //   }
+      // )
 
-      axios.get('/all/fixtures').then(
+      axios.get('/comingmatches').then(
         res => {
           const response = res.data;
           console.log('Data: ', response)
@@ -32,14 +34,6 @@ function App() {
           // console.log('Balance: ', response.balance)
         }
       )
-
-      // axios.get('/pft/landing').then(
-      //   res => {
-      //     const response = res.data;
-      //     console.log('Data2: ', response)
-      //     setMessage(response)
-      //   }
-      // )
 
     }
 
@@ -63,10 +57,16 @@ function App() {
     <Router>
 
       <div className="App">
-        <h1>Welcome</h1>
+        {/* <h1>Welcome</h1> */}
         
         <Routes>
           <Route path="/" exact element={<Home fixtures={fixtures} />} />
+          
+          {/* <Route path="/admin" render={
+            props => <Admin />
+          }/> */}
+
+          <Route path="/admin" element={<Admin />} />
 
         </Routes>
 
