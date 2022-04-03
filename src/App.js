@@ -9,7 +9,7 @@ import Admin from './pages/Admin'
 function App() {
 
   const [fixtures, setFixtures] = useState([]);
-  const [message, setMessage] = useState([]);
+  // const [message, setMessage] = useState([]);
 
   useEffect(() => {
 
@@ -24,7 +24,7 @@ function App() {
       //   }
       // )
 
-      axios.get('/comingmatches').then(
+      axios.get('/allmatches').then(
         res => {
           const response = res.data;
           console.log('Data: ', response)
@@ -42,16 +42,16 @@ function App() {
   }, [])
 
   // Fetch Title
-  const fetchFixtures = async () => {
+  // const fetchFixtures = async () => {
 
 
-    const res = await fetch('/all/fixtures')
-    const data = await res.json()
-    console.log(data)
-    setFixtures(data)
+  //   const res = await fetch('/all/fixtures')
+  //   const data = await res.json()
+  //   console.log(data)
+  //   setFixtures(data)
 
-    return data
-  }
+  //   return data
+  // }
 
   return (
     <Router>

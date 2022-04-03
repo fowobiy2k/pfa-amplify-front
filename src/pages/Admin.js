@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { TaskLinks } from '../data/TaskLinks'
 import MatchFormHandler from '../components/form_handlers/MatchFormHandler';
 import PlayerFormHandler from '../components/form_handlers/PlayerFormHandler';
-import axios from 'axios'
+// import axios from 'axios'
 import './admin.scss'
 import PaymentFormHandler from '../components/form_handlers/PaymentFormHandler';
 import ExpenseFormHandler from '../components/form_handlers/ExpenseFormHandler';
@@ -21,26 +21,26 @@ const Admin = () => {
 
     }
 
-    const registerPlayer = async (e) => {
-        e.preventDefault()
+    // const registerPlayer = async (e) => {
+    //     e.preventDefault()
         
-        let myForm = document.getElementById(task)
+    //     let myForm = document.getElementById(task)
 
-        const requestOptions = {
-            method: 'POST',
-            Headers: { 'Content-Type': 'application/json '},
-            body : myForm
-        };
+    //     const requestOptions = {
+    //         method: 'POST',
+    //         Headers: { 'Content-Type': 'application/json '},
+    //         body : myForm
+    //     };
 
-        axios.post('http://localhost:8099/pfa/createplayer', myForm)
-            .then(response => console.log(response))
-            .catch(err => console.log(err))
+    //     axios.post('http://localhost:8099/pfa/createplayer', myForm)
+    //         .then(response => console.log(response))
+    //         .catch(err => console.log(err))
 
-        myForm.reset()
+    //     myForm.reset()
 
-        setTask('')
+    //     setTask('')
 
-    }
+    // }
 
     return (
         <div className='admin'>

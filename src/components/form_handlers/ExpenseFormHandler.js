@@ -1,6 +1,6 @@
 import {useRef} from 'react'
 import { useNavigate } from 'react-router-dom'
-import classes from './ExpenseFormHandler.scss'
+// import classes from './ExpenseFormHandler.scss'
 
 const ExpenseFormHandler = () => {
     const navigate = useNavigate()

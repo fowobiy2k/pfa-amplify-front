@@ -5,7 +5,7 @@ const Card = ({ url, header, desc }) => {
     const image = require('../img/' + url)
     return (
         <div className={classes.card}>
-            <img src={image} alt="photo" />
+            <img src={image} alt="my card" />
 
             <div className={classes.textbox}>
                 <p className={classes.desc}>{desc}</p>

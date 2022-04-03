@@ -62,6 +62,8 @@ const MatchFormHandler = () => {
                                 </div>
                             </div>
 
+                            {/* isHomeMatch */}
+
                             <div className="input-block">
                                 <div className="label">
                                 <label htmlFor="venue">Venue:</label>
