@@ -1,0 +1,43 @@
+.reg-player {
+    h4 {
+        color: yellow;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+    }
+
+    .player-reg-form {
+        margin: 1em 2em;
+
+        fieldset {
+            border: 1px solid yellow;
+        }
+        
+        .label {
+            margin-top: 1em;
+            text-transform: capitalize;
+            // color: lightsalmon;
+        }
+
+        input {
+            padding: .5em 0;
+            border-radius: .5em;
+            border: 2px solid salmon; 
+        }
+
+        button {
+            padding: 1em 2em;
+            margin-left: 30%;
+            background-color: yellow;
+            margin-top: 1em;
+        }
+
+        legend {
+            color: yellow;
+            text-transform: capitalize;
+        }
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+}

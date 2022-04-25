@@ -5,9 +5,9 @@
 
 
 // import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 import Teampic from "../components/Teampic";
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import Card from '../components/Card'
 import classes from './home.module.scss'
 import ComingFixtures from '../components/ComingFixtures'
@@ -19,7 +19,7 @@ const Home = ({ fixtures }) => {
     return (
         <div>
             
-            <div className="full-name">
+            {/* <div className="full-name">
                 <div>
                     
                     <Header />
@@ -29,7 +29,7 @@ const Home = ({ fixtures }) => {
                 <Navbar />
                 </div>
                 
-            </div>
+            </div> */}
 
             
 

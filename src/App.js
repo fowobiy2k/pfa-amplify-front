@@ -5,6 +5,8 @@ import axios from 'axios';
 import './App.scss'
 import Home from './pages/Home'
 import Admin from './pages/Admin'
+import Navbar from './components/Navbar'
+import Header from './components/Header'
 
 function App() {
 
@@ -41,7 +43,7 @@ function App() {
 
   }, [])
 
-  // Fetch Title
+  // Fetch Fixtures
   // const fetchFixtures = async () => {
 
 
@@ -57,7 +59,18 @@ function App() {
     <Router>
 
       <div className="App">
-        {/* <h1>Welcome</h1> */}
+        
+      <div className="full-name">
+                <div>
+                    
+                    <Header />
+                </div>
+                
+                <div>
+                <Navbar />
+                </div>
+                
+            </div>
         
         <Routes>
           <Route path="/" exact element={<Home fixtures={fixtures} />} />

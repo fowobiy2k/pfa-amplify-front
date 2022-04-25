@@ -1,0 +1,39 @@
+.payment {
+    h4 {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        color: lightgreen;
+    }
+
+    .payment-form {
+        margin: 1em 2em;
+
+        fieldset {
+            border: 1px solid lightgreen;
+        }
+        
+        .label {
+            margin-top: 1em;
+            text-transform: capitalize;
+            // color: lightgreen;
+        }
+
+        input {
+            padding: .5em 0;
+            border-radius: .5em;
+            border: 2px solid lightgreen; 
+        }
+
+        button {
+            padding: 1em 2em;
+            margin-left: 30%;
+            background-color: lightgreen;
+            margin-top: 1em;
+        }
+
+        legend {
+            color: lightgreen;
+            text-transform: capitalize;
+        }
+    }
+}

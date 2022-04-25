@@ -1,0 +1,40 @@
+.match {
+
+    h4 {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        color: lightsalmon;
+    }
+
+    .match-form {
+        margin: 1em 2em;
+
+        fieldset {
+            border: 1px solid salmon;
+        }
+        
+        .label {
+            margin-top: 1em;
+            text-transform: capitalize;
+            color: lightsalmon;
+        }
+
+        input {
+            padding: .5em 0;
+            border-radius: .5em;
+            border: 2px solid salmon; 
+        }
+
+        button {
+            padding: 1em 2em;
+            margin-left: 30%;
+            background-color: lightsalmon;
+            margin-top: 1em;
+        }
+
+        legend {
+            color: lightsalmon;
+            text-transform: capitalize;
+        }
+    }
+}

@@ -1,5 +1,6 @@
-import {useRef} from 'react'
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './paymentFormHandler.scss'
 
 const PaymentFormHandler = () => {
     const navigate = useNavigate()
@@ -16,7 +17,7 @@ const PaymentFormHandler = () => {
 
         const purpose = purposeField.current.value;
         const amount = amountField.current.value;
-        const payer = payerNameField.current.value 
+        const payer = payerNameField.current.value
         const payerId = payerIdField.current.value
         const date = dateField.current.value
 
@@ -40,71 +41,74 @@ const PaymentFormHandler = () => {
             navigate('/')
         })
 
-        
+
     }
 
     return (
         <div className="form-box payment display">
-                        <h4>record a payment</h4>
+            <h4>record a payment</h4>
 
-                        <form onSubmit={paymentHandler} className="payment-form" id='payment'>
-                            
-                        <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="purpose">purpose:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <select name="purpose" id="purpose" ref={purposeField} >
+            <form onSubmit={paymentHandler} className="payment-form" id='payment'>
+
+                <fieldset>
+                    <legend>payment data entry</legend>
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="purpose">purpose:</label> &nbsp; &nbsp;
+                        </div>
+
+                        <div className="input">
+                            <select name="purpose" id="purpose" ref={purposeField} >
                                 <option value="registration">registration</option>
                                 <option value="monthly fee">monthly fee</option>
                             </select> <br />
-                                </div>
-                            </div>
-                            
-                            <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="amount">amount:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <input type="text" name='amount' ref={amountField} /> <br />
-                                </div>
-                            </div>
-
-                            <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="paidBy">Paid By:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <input type="text" name='paidBy' ref={payerNameField} /> <br />
-                                </div>
-                            </div>
-
-                            <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="payerId">Payer ID:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <input type="text" name='payerId' ref={payerIdField} /> <br />
-                                </div>
-                            </div>
-
-                            <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="date">Date:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <input type="date" name='date' ref={dateField} /> <br />
-                                </div>
-                            </div>
-
-                            <button>Save</button>
-                        </form>
+                        </div>
                     </div>
+
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="amount">amount:</label> &nbsp; &nbsp;
+                        </div>
+
+                        <div className="input">
+                            <input type="text" name='amount' ref={amountField} /> <br />
+                        </div>
+                    </div>
+
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="paidBy">Paid By:</label> &nbsp; &nbsp;
+                        </div>
+
+                        <div className="input">
+                            <input type="text" name='paidBy' ref={payerNameField} /> <br />
+                        </div>
+                    </div>
+
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="payerId">Payer ID:</label> &nbsp; &nbsp;
+                        </div>
+
+                        <div className="input">
+                            <input type="text" name='payerId' ref={payerIdField} /> <br />
+                        </div>
+                    </div>
+
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="date">Date:</label> &nbsp; &nbsp;
+                        </div>
+
+                        <div className="input">
+                            <input type="date" name='date' ref={dateField} /> <br />
+                        </div>
+                    </div>
+
+                    <button>Save</button>
+                </fieldset>
+            </form>
+        </div>
 
     )
 }

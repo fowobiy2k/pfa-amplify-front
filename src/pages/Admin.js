@@ -44,7 +44,11 @@ const Admin = () => {
 
     return (
         <div className='admin'>
-            <h3 className='welcome'>Welcome, admin</h3>            
+
+            <div className='title'>
+                <h3 className='welcome'>data entry</h3>            
+            </div>
+            
 
             <div className="tasks">
 
@@ -63,9 +67,6 @@ const Admin = () => {
                     { task === 'payment' && <PaymentFormHandler /> }
                     { task === 'expenses' && <ExpenseFormHandler /> }
 
-                    
-
-                    
                     
                 </div>
                 <div className="display" id='display'></div>

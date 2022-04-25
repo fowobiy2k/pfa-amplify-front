@@ -2,5 +2,39 @@
     h4 {
         text-transform: capitalize;
         font-size: 1.5rem;
+        color: lightpink;
     }
+
+    .expenses-form {
+        margin: 1em 2em;
+
+        legend {
+            text-transform: capitalize;
+        }
+
+        .label {
+            margin-top: 1em;
+            text-transform: capitalize;
+        }
+
+        input {
+            margin-bottom: 1em;
+            border-radius: .5em;
+            padding: .5em 0;
+        }
+
+        input[type=date] {
+            margin-bottom: 2em;
+        }
+
+        button {
+            padding: 1em 2em;
+            background-color: lightpink;
+            margin-left: 30%;
+        }
+
+    }
+
+    
+
 }

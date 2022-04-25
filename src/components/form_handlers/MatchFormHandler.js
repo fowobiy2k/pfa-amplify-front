@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './matchFormHandler.scss'
 
 const MatchFormHandler = () => {
     const navigate = useNavigate()
@@ -43,60 +44,66 @@ const MatchFormHandler = () => {
             navigate('/')
         })
 
-        
+
     }
 
     return (
         <div>
             <div className="form-box match display" >
-                        <h4>create friendly match</h4>
-                        <form onSubmit={matchHandler} className='match-form' id='match'>
+                <h4>create friendly match</h4>
+                <form onSubmit={matchHandler} className='match-form' id='match'>
 
-                            <div className="input-block">
-                                <div className="label">
+                    <fieldset>
+                        <legend>match data entry</legend>
+
+                        <div className="input-block">
+                            <div className="label">
                                 <label htmlFor="opponent">opponent:</label>
-                                </div>
-                                
-                                <div className="input">
-                                <input type="text" name='opponent' ref={opponentField}/> <br />
-                                </div>
                             </div>
 
-                            {/* isHomeMatch */}
+                            <div className="input">
+                                <input type="text" name='opponent' ref={opponentField} /> <br />
+                            </div>
+                        </div>
 
-                            <div className="input-block">
-                                <div className="label">
+                        {/* isHomeMatch */}
+
+                        <div className="input-block">
+                            <div className="label">
                                 <label htmlFor="venue">Venue:</label>
-                                </div>
-                                
-                                <div className="input">
+                            </div>
+
+                            <div className="input">
                                 <input type="text" name='venue' ref={venueField} /> <br />
-                                </div>
                             </div>
+                        </div>
 
-                            <div className="input-block">
-                                <div className="label">
+                        <div className="input-block">
+                            <div className="label">
                                 <label htmlFor="date">date:</label>
-                                </div>
-                                
-                                <div className="input">
+                            </div>
+
+                            <div className="input">
                                 <input type="date" name='date' ref={dateField} /> <br />
-                                </div>
                             </div>
+                        </div>
 
-                            <div className="input-block">
-                                <div className="label">
+                        <div className="input-block">
+                            <div className="label">
                                 <label htmlFor="time">time:</label>
-                                </div>
-                                
-                                <div className="input">
-                                <input type="time" name='time' ref={timeField} /> <br />
-                                </div>
                             </div>
 
-                            <button>Save</button>
-                        </form>
-                    </div>
+                            <div className="input">
+                                <input type="time" name='time' ref={timeField} /> <br />
+                            </div>
+                        </div>
+
+                        <button>Save</button>
+                    </fieldset>
+
+
+                </form>
+            </div>
         </div>
     )
 }

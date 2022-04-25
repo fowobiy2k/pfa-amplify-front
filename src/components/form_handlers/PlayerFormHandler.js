@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './playerFormHandler.scss'
 
 const PlayerFormHandler = () => {
     const navigate = useNavigate()
@@ -58,7 +59,11 @@ const PlayerFormHandler = () => {
         <div className="form-box reg-player diplay">
 
             <h4>register new player</h4>
-            <form onSubmit={playerHandler} className='reg-player-form' id='register player'>
+            <form onSubmit={playerHandler} className='player-reg-form' id='register player'>
+
+                <fieldset>
+
+                <legend>player data entry</legend>
 
                 <div className="input-block">
                     <div className="label">
@@ -145,6 +150,8 @@ const PlayerFormHandler = () => {
                 </div>
 
                 <button>Save</button>
+
+                </fieldset>
 
             </form>
         </div>

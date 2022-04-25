@@ -8,7 +8,7 @@ const Header = () => {
 
     const openMenu = () => {
         const nav = document.querySelector('nav');
-        nav.classList.add('displayed');
+        nav.classList.contains('displayed') ? nav.classList.remove('displayed') : nav.classList.add('displayed');
     }
 
 

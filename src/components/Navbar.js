@@ -18,8 +18,8 @@ const Navbar = () => {
                     <GrIcons.GrClose />
                 </div>
                 <ul>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/admin'>Admin</Link></li>
+                    <li><Link to='/' onClick={closeMenu}>Home</Link></li>
+                    <li><Link to='/admin' onClick={closeMenu}>Admin</Link></li>
                 </ul>
             </IconContext.Provider>
         </nav>

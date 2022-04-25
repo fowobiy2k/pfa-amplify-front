@@ -1,6 +1,6 @@
-import {useRef} from 'react'
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-// import classes from './ExpenseFormHandler.scss'
+import './ExpenseFormHandler.scss'
 
 const ExpenseFormHandler = () => {
     const navigate = useNavigate()
@@ -16,7 +16,7 @@ const ExpenseFormHandler = () => {
         const purpose = purposeField.current.value;
         const amount = amountField.current.value;
         const date = dateField.current.value;
-        
+
 
         const expense = {
             purpose,
@@ -35,49 +35,55 @@ const ExpenseFormHandler = () => {
             navigate('/')
         })
 
-        
+
     }
 
     return (
         <div className="form-box expenses display">
 
-                        <h4>record expenses</h4>
+            <h4>record expenses</h4>
 
-                        <form onSubmit={expenseHandler} className="expenses-form" id='expenses'>
-                            
-                        <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="purpose">purpose:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <input type="text" name='purpose' ref={purposeField} /> <br />
-                                </div>
-                            </div>
+            <form onSubmit={expenseHandler} className="expenses-form" id='expenses'>
 
-                            <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="amount">amount:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <input type="text" name='amount' ref={amountField} /> <br />
-                                </div>
-                            </div>
+                <fieldset>
+                    <legend>expense data entry</legend>
+                    
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="purpose">purpose:</label> &nbsp; &nbsp;
+                        </div>
 
-                            <div className="input-block">
-                                <div className="label">
-                                <label htmlFor="date">Date:</label> &nbsp; &nbsp;
-                                </div>
-                                
-                                <div className="input">
-                                <input type="date" name='date' ref={dateField} /> <br />
-                                </div>
-                            </div>
-
-                            <button>Save</button>
-                        </form>
+                        <div className="input">
+                            <input type="text" name='purpose' ref={purposeField} /> <br />
+                        </div>
                     </div>
+
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="amount">amount:</label> &nbsp; &nbsp;
+                        </div>
+
+                        <div className="input">
+                            <input type="text" name='amount' ref={amountField} /> <br />
+                        </div>
+                    </div>
+
+                    <div className="input-block">
+                        <div className="label">
+                            <label htmlFor="date">Date:</label> &nbsp; &nbsp;
+                        </div>
+
+                        <div className="input">
+                            <input type="date" name='date' ref={dateField} /> <br />
+                        </div>
+                    </div>
+
+                    <button>Save</button>
+
+                </fieldset>
+
+            </form>
+        </div>
 
     )
 }
